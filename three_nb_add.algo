@@ -1,0 +1,20 @@
+ALGORITHM checkpoint
+VAR
+    c:CHAR:='';
+    nb_char:INTEGER:=0;
+    nb_word:INTEGER:=1;
+    nb_vow:INTEGER:=0;
+BEGIN
+    WHILE (c<>.) DO
+        read (c);
+    END_WHILE
+    IF (c=' ') THEN;
+        nb_word=nb_word+1;
+    END_IF
+    IF (c='a' OR c='e' OR c='i' OR c='u' OR c='y' OR c='o') THEN
+        nb_vow=nb_vow+1;
+    END_IF
+write("the length of the sentence is ",nb_char);
+write("The number of words in the sentence is ",nb_word);
+write("The number of vowels in the sentence is ",nb_vow);
+END
